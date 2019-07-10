@@ -1,0 +1,44 @@
+.header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .container .logo{
+    display: flex;
+    align-items: center
+}
+.nav-title{
+    margin-top: 3px;
+    padding-left: 20px;
+    font-family: Lato
+}
+
+.header .container a{
+    text-decoration: none
+}
+.header .container a:link{
+    color: rgb(105, 104, 104)
+}
+.header .container a:visited{
+    color: rgb(105, 104, 104)
+}
+.header .container a:hover{
+    color: rgb(105, 104, 104)
+    
+}
+.header .container a:active{
+    color: rgb(105, 104, 104)
+}
+
+
+.gitName{
+    color: rgb(138, 144, 150);
+    font-weight: bold;
+    font-family: Montserrat, sans-serif
+}
+
+@media (max-width: 700px){
+    .header-config .container{
+        flex-direction: column
+    }
+}
