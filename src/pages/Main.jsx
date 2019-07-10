@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import './Main.css'
 
 import apiAllBooks from '../services/apiAllBooks'
 
@@ -24,7 +25,10 @@ class Main extends Component {
 
     render() {
         return (
-            <h1>Books</h1>
+            <div className="Main">
+                <h1 className="book">Books</h1>
+            </div>
+
         );
     }
 }
