@@ -38,7 +38,7 @@
 }
 
 @media (max-width: 700px){
-    .header-config .container{
+    .header .container{
         flex-direction: column
     }
 }
