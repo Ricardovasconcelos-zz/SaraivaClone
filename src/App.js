@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Main from './pages/Main'
 import Header from './components/Header/Header';
 import CarouselComponent from './components/Carousel/CarouselComponent'
+import MoreRead from './components/moreRead/MoreRead';
 
 class App extends Component {
   render() {
@@ -10,7 +11,7 @@ class App extends Component {
       <div className="App">
         <Header/>
        <CarouselComponent/>
-        <Main/>
+       <MoreRead/>
         
       </div>
     )

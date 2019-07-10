@@ -1,0 +1,22 @@
+.MoreRead{
+   border:1px solid red;
+
+}
+.MoreRead .Content{
+   margin: 10px 10px;
+   display: flex;
+   
+}
+
+.MoreRead .Content .title-content{
+   display: flex;
+   justify-content: flex-end;
+   font-size: 17px
+}
+.MoreRead .Content .foto{
+   display: flex;
+   justify-content: flex-start;
+   margin: 10px;
+   height: 190px;
+   width: 140px;
+}
