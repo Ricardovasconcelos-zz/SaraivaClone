@@ -7,7 +7,7 @@ import './MoreRead.css'
 import apiAllBooks from '../../services/apiAllBooks'
 
 
-import { Card, Button } from 'react-bootstrap'
+import { Container, Button } from 'react-bootstrap'
 
 
 
@@ -15,23 +15,23 @@ import { Card, Button } from 'react-bootstrap'
 export default class Responsive extends Component {
   state = {
     infoBooks: [],
-}
+  }
 
-componentDidMount() {
+  componentDidMount() {
     this.loadBooks();
-}
+  }
 
-loadBooks = async () => {
+  loadBooks = async () => {
 
     const response = await apiAllBooks.get('')
     console.log(response.data)
 
     this.setState({
-        infoBooks: response.data.items
+      infoBooks: response.data.items
     })
-    
 
-}
+
+  }
   render() {
     const { infoBooks } = this.state;
 
@@ -39,24 +39,38 @@ loadBooks = async () => {
       dots: true,
       infinite: false,
       speed: 500,
-      slidesToShow: 4,
-      slidesToScroll: 4,
+      slidesToShow: 3,
+      slidesToScroll: 3,
       initialSlide: 0,
       responsive: [
         {
           breakpoint: 1024,
           settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
+            slidesToShow: 2,
+            slidesToScroll: 2,
             infinite: true,
             dots: true
+          }
+        }, {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initialSlide: 2
+          }
+        }, {
+          breakpoint: 765,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            initialSlide: 2
           }
         },
         {
           breakpoint: 600,
           settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
+            slidesToShow: 1,
+            slidesToScroll: 1,
             initialSlide: 2
           }
         },
@@ -71,32 +85,41 @@ loadBooks = async () => {
     };
 
     return (
- 
-      <div className="MoreRead">
-        <h2> Mais Vendidos </h2>
-        <Slider {...settings}>
-        {infoBooks.map(item => (
-          <div>
-          <Card className="Content">
-                    <Card.Img variant="top"  
-                    src={item.volumeInfo.imageLinks.smallThumbnail}
-                    className="foto"
-                    />
-                    <Card.Body>
-                        <Card.Title className="title-content"><strong>{item.volumeInfo.title}</strong></Card.Title>
-                        <Card.Text className="description-content">{item.volumeInfo.authors} </Card.Text>
-                        <Card.Text className="description-content">{item.volumeInfo.categories}</Card.Text>
-                        <Button variant="warning" className="button">Adicionar ao carrinho </Button>
-                    </Card.Body>
-                </Card>
+      <Container>
+        <div className="MoreRead">
+          <h2> Mais Vendidos </h2>
+          <Slider {...settings}>
+            {infoBooks.map(item => (
+              <div>
 
-          </div>
-          
-))
-}
-          
-        </Slider>
-      </div>
+                  <div className="Content">
+
+                    <div className="Image">
+                      <img
+                        src={item.volumeInfo.imageLinks.smallThumbnail}
+                        className="foto"
+                      />
+                    </div>
+                    <div className="books">
+                      <h4 className="title-content"><strong>{item.volumeInfo.title}</strong></h4>
+                      <h4 className="authour-content">{item.volumeInfo.authors} </h4>
+                      <h4 className="novalue-content">R$ {item.saleInfo.listPrice.amount + 10}</h4>
+                      <h4 className="value-content">R$ {item.saleInfo.retailPrice.amount}</h4>
+                      <Button variant="warning" size="sm" className="button">Adicionar ao carrinho </Button>
+                    </div>
+
+
+
+                  </div>
+                  
+
+              </div>
+            ))
+            }
+
+          </Slider>
+        </div>
+      </Container>
     );
   }
 }

@@ -1,22 +1,55 @@
 .MoreRead{
-   border:1px solid red;
-
+   background: #ebebeb;
+   font-family: 'Work Sans', sans-serif;
 }
-.MoreRead .Content{
+
+.Content{
    margin: 10px 10px;
+  background: #ffffff;
    display: flex;
-   
+   flex-wrap: nowrap;
+   justify-content: center;
+}
+.books{
+   border: 1px solid rgb(255, 255, 255);
+   padding-top: 10px;
+   display: flex;
+   flex-direction: column;
+   line-height:11px;
+   margin-left: 15px;
+   font-family: 'Work Sans', sans-serif;
+}
+h2{
+   font-family: 'Work Sans', sans-serif;
+}
+.center{
+   border: 1px solid red
 }
 
-.MoreRead .Content .title-content{
+.title-content{
+   font-size: 12px;
    display: flex;
-   justify-content: flex-end;
-   font-size: 17px
+   align-items: center;
 }
-.MoreRead .Content .foto{
-   display: flex;
-   justify-content: flex-start;
+.authour-content{
+   font-size: 10px;
+}
+.novalue-content{
+   font-size:13px;
+   font-weight: bold;
+   text-decoration: line-through;
+}
+.value-content{
+   font-size: 20px;
+   font-weight: bold
+}
+.button{
+
+}
+
+.foto{
    margin: 10px;
-   height: 190px;
-   width: 140px;
+   height: 140px;
+   width: 120px;
+   border: 1px solid red
 }
