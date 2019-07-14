@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 
 
-import './MoreRead.css'
+import './MostBought.css'
 
 import apiAllBooks from '../../services/apiAllBooks'
 
@@ -11,8 +11,7 @@ import { Container, Button } from 'react-bootstrap'
 
 
 
-
-export default class Responsive extends Component {
+ class MostBought extends Component {
   state = {
     infoBooks: [],
   }
@@ -86,8 +85,8 @@ export default class Responsive extends Component {
 
     return (
       <Container>
-        <div className="MoreRead">
-          <h2> Mais Vendidos </h2>
+        <div className="MostBought">
+          <h2 className="Title-content"> Mais Vendidos </h2>
           <Slider {...settings}>
             {infoBooks.map(item => (
               <div>
@@ -123,3 +122,4 @@ export default class Responsive extends Component {
     );
   }
 }
+export default MostBought

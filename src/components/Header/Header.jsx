@@ -5,7 +5,7 @@ import { Navbar } from 'react-bootstrap'
 
 const Header = () => (
     <div className="header">
-         <Navbar bg="light" variant="light" className="nav">
+         <Navbar  className="nav">
             <div className="container">
                 <Navbar.Brand href="#home" className="logo">
                     <img

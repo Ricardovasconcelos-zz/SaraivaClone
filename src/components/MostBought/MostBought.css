@@ -1,8 +1,11 @@
-.MoreRead{
-   background: #ebebeb;
+.MostBought{
+ 
+}
+.Title-content{
+   margin: 30px 0px 0px 10px;
+   font-size: 25px;
    font-family: 'Work Sans', sans-serif;
 }
-
 .Content{
    margin: 10px 10px;
   background: #ffffff;
@@ -11,19 +14,12 @@
    justify-content: center;
 }
 .books{
-   border: 1px solid rgb(255, 255, 255);
    padding-top: 10px;
    display: flex;
    flex-direction: column;
    line-height:11px;
    margin-left: 15px;
    font-family: 'Work Sans', sans-serif;
-}
-h2{
-   font-family: 'Work Sans', sans-serif;
-}
-.center{
-   border: 1px solid red
 }
 
 .title-content{
@@ -51,5 +47,4 @@ h2{
    margin: 10px;
    height: 140px;
    width: 120px;
-   border: 1px solid red
 }
