@@ -2,14 +2,14 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 
 
-import './MoreRead.css'
+import './Favorite.css'
 
-import apiMoreRead from '../../services/apiMoreRead'
+import apiFavoriteBooks from '../../services/apiFavoriteBooks'
 
 
 import { Container, Button } from 'react-bootstrap'
 
- class MoreRead extends Component {
+ class Favorite extends Component {
   state = {
     infoBooks: [],
   }
@@ -20,7 +20,7 @@ import { Container, Button } from 'react-bootstrap'
 
   loadBooks = async () => {
 
-    const response = await apiMoreRead.get('')
+    const response = await apiFavoriteBooks.get('')
     console.log(response.data)
 
     this.setState({
@@ -82,8 +82,8 @@ import { Container, Button } from 'react-bootstrap'
 
     return (
       <Container>
-        <div className="MoreRead">
-          <h2 className="Title-content"> Os mais visto da semana </h2>
+        <div className="Favorite">
+          <h2 className="Title-content">Os queridinhos da galera </h2>
           <Slider {...settings}>
             {infoBooks.map(item => (
               <div>
@@ -97,7 +97,7 @@ import { Container, Button } from 'react-bootstrap'
                     <div className="books">
                       <h4 className="title-content"><strong>{item.volumeInfo.title}</strong></h4>
                       <h4 className="authour-content">{item.volumeInfo.authors} </h4>
-                      <h4 className="pre-content">Pré-venda</h4>
+                      <h4 className="off-content">R$15 OFF com o desconto GoReact</h4>
                       <h4 className="value-content">R$ {item.saleInfo.retailPrice.amount}</h4>
                     </div>
                   </div>
@@ -112,4 +112,4 @@ import { Container, Button } from 'react-bootstrap'
     );
   }
 }
-export default MoreRead
+export default Favorite

@@ -5,8 +5,9 @@ import { Navbar } from 'react-bootstrap'
 
 const Header = () => (
     <div className="header">
-         <Navbar  className="nav">
+        <Navbar className="nav">
             <div className="container">
+                
                 <Navbar.Brand href="#home" className="logo">
                     <img
                         alt=""
@@ -18,8 +19,8 @@ const Header = () => (
                     <h4 className="nav-title">2UBooks</h4>
                 </Navbar.Brand>
 
-                <a href="https://github.com/Ricardovasconcelos"className="gitName">Github.com/Ricardovasconcelos</a>
-                
+                <a href="https://github.com/Ricardovasconcelos" className="gitName">Github.com/Ricardovasconcelos</a>
+
             </div>
         </Navbar>
 

@@ -5,7 +5,7 @@ import Header from './components/Header/Header';
 import CarouselComponent from './components/Carousel/CarouselComponent'
 import MostBought from './components/MostBought/MostBought';
 import MoreRead from './components/MoreRead/MoreRead';
-
+import Favorite from './components/Favorite/Favorite'
 import './App.css'
 
 class App extends Component {
@@ -15,7 +15,9 @@ class App extends Component {
        <Header/>
        <CarouselComponent/>
        <MostBought/>
+       <Favorite/>
         <MoreRead/>
+
       </div>
     )
   }
