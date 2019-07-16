@@ -97,7 +97,7 @@ import { Container, Button } from 'react-bootstrap'
                     <div className="books">
                       <h4 className="title-content"><strong>{item.volumeInfo.title}</strong></h4>
                       <h4 className="authour-content">{item.volumeInfo.authors} </h4>
-                      <h4 className="off-content">R$15 OFF com o desconto GoReact</h4>
+                      <h4 className="off-content">R$15 OFF com o cupom RicardoReact</h4>
                       <h4 className="value-content">R$ {item.saleInfo.retailPrice.amount}</h4>
                     </div>
                   </div>

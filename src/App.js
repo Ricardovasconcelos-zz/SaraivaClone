@@ -7,6 +7,7 @@ import MostBought from './components/MostBought/MostBought';
 import MoreRead from './components/MoreRead/MoreRead';
 import Favorite from './components/Favorite/Favorite'
 import './App.css'
+import ForYou from './components/ForYou/ForYou';
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
        <CarouselComponent/>
        <MostBought/>
        <Favorite/>
+       <ForYou/>
         <MoreRead/>
 
       </div>

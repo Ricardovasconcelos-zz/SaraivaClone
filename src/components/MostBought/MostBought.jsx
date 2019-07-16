@@ -104,7 +104,7 @@ import { Container, Button } from 'react-bootstrap'
                       <h4 className="authour-content">{item.volumeInfo.authors} </h4>
                       <h4 className="novalue-content">R$ {item.saleInfo.listPrice.amount + 10}</h4>
                       <h4 className="value-content">R$ {item.saleInfo.retailPrice.amount}</h4>
-                      <Button variant="warning" size="sm" className="button">Adicionar ao carrinho </Button>
+                      <Button variant="info" size="sm" className="button">Adicionar ao carrinho </Button>
                     </div>
 
 

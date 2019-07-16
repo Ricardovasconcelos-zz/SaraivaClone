@@ -1,0 +1,26 @@
+.Content-forYou{
+
+    background: #fffefe;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.forYouTitle{
+margin-top: 3em;
+}
+.ForYou{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.foryou-foto{
+    margin: 10px;
+    height: 150px;
+    width: 240px;
+ }
+ .buttonsee{
+    text-align: center;
+    padding-bottom: 10px;
+  
+ }
