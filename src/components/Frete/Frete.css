@@ -1,0 +1,81 @@
+.Info-frete{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "FreeFrete Premium";
+    line-height: 1;
+    width: 100%;
+    height: 250px;
+    padding-top: 1em
+}
+.FreeFrete{
+    justify-self: center;
+    align-self: center;
+    grid-area: FreeFrete;
+    font-family: 'Work Sans', sans-serif;
+
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: "truck contentFrete"
+}
+.truck{
+    grid-area: truck;
+    align-self: center;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+.contentFrete{
+    grid-area: contentFrete;
+    justify-self: center;
+    align-self: center
+}
+.FreeFrete h4{
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+}
+.Premium{
+    justify-self: center;
+    align-self: center;
+    grid-area: Premium;
+    font-family: 'Work Sans', sans-serif;
+
+    
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+    grid-template-areas: "check contentPremium"
+}
+.check{
+    grid-area: check;
+    align-self: center;
+    margin-left: 10px;
+    margin-bottom: 15px;
+}
+.contentPremium{
+    grid-area: contentPremium;
+    justify-self: center;
+    align-self: center
+}
+.Premium h4{
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+}
+p{
+    font-size: 13px;
+    text-shadow: 1px 1px 10px  rgb(145, 144, 144)
+}
+
+@media screen and (max-width: 767px){
+    .Info-frete{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "FreeFrete"
+                                "Premium"
+                            
+        }
+        .FreeFrete{
+            margin-top: 5em;
+        }
+}

@@ -6,8 +6,11 @@ import CarouselComponent from './components/Carousel/CarouselComponent'
 import MostBought from './components/MostBought/MostBought';
 import MoreRead from './components/MoreRead/MoreRead';
 import Favorite from './components/Favorite/Favorite'
-import './App.css'
 import ForYou from './components/ForYou/ForYou';
+import Frete from './components/Frete/Frete'
+
+import './App.css'
+
 
 class App extends Component {
   render() {
@@ -19,6 +22,7 @@ class App extends Component {
        <Favorite/>
        <ForYou/>
         <MoreRead/>
+        <Frete/>
 
       </div>
     )
