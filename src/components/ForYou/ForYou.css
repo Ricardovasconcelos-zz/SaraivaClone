@@ -1,18 +1,39 @@
-.Content-forYou{
+
+.ForYou{   
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 20px;
+
+}
+.Content-news{
+    background: #fffefe;
+    margin-right: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.Content-lowprice{
     background: #fffefe;
     border-radius: 10px;
     margin-bottom: 20px;
+    margin-right: 15px;
+}
+.Content-love{
+    background: #fffefe;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-right: 15px;
+}
+.Content-invest{
+    background: #fffefe;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-right: 15px;
 }
 .forYouTitle{
 margin-top: 3em;
 }
-.ForYou{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
+
 .foryou-foto{
     margin: 10px;
     height: 150px;
@@ -22,3 +43,24 @@ margin-top: 3em;
     text-align: center;
     padding-bottom: 10px;
  }
+ .Image{
+     text-align: center;
+     margin: auto
+ }
+ @media screen and (max-width: 767px){
+    .ForYou{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "news""lowprice"
+    "love""invest";
+    }
+    .foryou-foto{
+        margin: 10px;
+        height: 100px;
+        width: 190px;
+     }
+}
+
+
