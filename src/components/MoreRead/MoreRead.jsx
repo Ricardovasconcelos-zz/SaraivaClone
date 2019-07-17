@@ -87,7 +87,7 @@ import { Container, Button } from 'react-bootstrap'
           <Slider {...settings}>
             {infoBooks.map(item => (
               <div>
-                  <div className="Content">
+                  <div className="Content-moreRead">
                     <div className="Image">
                       <img
                         src={item.volumeInfo.imageLinks.smallThumbnail}
@@ -95,7 +95,7 @@ import { Container, Button } from 'react-bootstrap'
                       />
                     </div>
                     <div className="books">
-                      <h4 className="title-content"><strong>{item.volumeInfo.title}</strong></h4>
+                      <h4 className="Bookname-content-moreRead"><strong>{item.volumeInfo.title}</strong></h4>
                       <h4 className="authour-content">{item.volumeInfo.authors} </h4>
                       <h4 className="pre-content">Pré-venda</h4>
                       <h4 className="value-content">R$ {item.saleInfo.retailPrice.amount}</h4>

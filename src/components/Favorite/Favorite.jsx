@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 
-
+import { FiCreditCard } from "react-icons/fi";
 import './Favorite.css'
 
 import apiFavoriteBooks from '../../services/apiFavoriteBooks'
@@ -87,7 +87,7 @@ import { Container, Button } from 'react-bootstrap'
           <Slider {...settings}>
             {infoBooks.map(item => (
               <div>
-                  <div className="Content">
+                  <div className="Content-favorite">
                     <div className="Image">
                       <img
                         src={item.volumeInfo.imageLinks.smallThumbnail}
@@ -95,10 +95,13 @@ import { Container, Button } from 'react-bootstrap'
                       />
                     </div>
                     <div className="books">
-                      <h4 className="title-content"><strong>{item.volumeInfo.title}</strong></h4>
+                      <h4 className="Bookname-content-favorite"><strong>{item.volumeInfo.title}</strong></h4>
                       <h4 className="authour-content">{item.volumeInfo.authors} </h4>
-                      <h4 className="off-content">R$15 OFF com o cupom RicardoReact</h4>
+                      <h4 className="off-content">R$15 OFF com o cupom Ricardo</h4>
                       <h4 className="value-content">R$ {item.saleInfo.retailPrice.amount}</h4>
+                    </div>
+                    <div className="botao">
+                      <Button variant="outline-warning" size="sm" className="button-fav"><FiCreditCard size={20} className="Car-icon"/>RESGATAR CUPOM</Button>
                     </div>
                   </div>
                   

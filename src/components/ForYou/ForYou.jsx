@@ -1,10 +1,6 @@
 import React, { Component } from "react";
-import Slider from "react-slick";
-
 
 import './ForYou.css'
-
-
 
 import { Container, Button } from 'react-bootstrap'
 

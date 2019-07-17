@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-
+import { FiShoppingCart} from "react-icons/fi";
 
 import './MostBought.css'
 
@@ -90,7 +90,7 @@ import { Container, Button } from 'react-bootstrap'
           <Slider {...settings}>
             {infoBooks.map(item => (
               <div>
-
+               
                   <div className="Content">
 
                     <div className="Image">
@@ -100,17 +100,18 @@ import { Container, Button } from 'react-bootstrap'
                       />
                     </div>
                     <div className="books">
-                      <h4 className="title-content"><strong>{item.volumeInfo.title}</strong></h4>
+                      <h4 className="Bookname-content"><strong>{item.volumeInfo.title}</strong></h4>
                       <h4 className="authour-content">{item.volumeInfo.authors} </h4>
                       <h4 className="novalue-content">R$ {item.saleInfo.listPrice.amount + 10}</h4>
-                      <h4 className="value-content">R$ {item.saleInfo.retailPrice.amount}</h4>
-                      <Button variant="info" size="sm" className="button">Adicionar ao carrinho </Button>
+                      <h4 className="value-content">R$ {item.saleInfo.retailPrice.amount}</h4>                    
                     </div>
 
-
-
+                    <div className="botao">
+                      <Button variant="warning" size="sm" className="button"><FiShoppingCart size={20} className="Car-icon"/>ADICIONAR AO CARRINHO</Button>
+                    </div>
                   </div>
                   
+
 
               </div>
             ))

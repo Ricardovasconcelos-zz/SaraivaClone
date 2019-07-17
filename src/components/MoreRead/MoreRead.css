@@ -1,7 +1,56 @@
+.MoreRead{
+        margin-top: 3em; 
+}
+.Title-content{
+   margin: 50px 0px 0px 10px;
+   font-size: 25px;
+   font-family: 'Work Sans', sans-serif;
+}
+.Content-moreRead{
+   margin: 10px 10px;
+  background: #ffffff;
+   display: grid;
+   grid-template-columns: 1fr 2fr;
+   grid-template-rows: 180px 100px;
+   grid-template-areas:
+   "image book";
+   height:200px;
+   border-radius: 10px;
+}
+.Image{
+   grid-area: image
+}
+.foto{
+   margin: 20px 10px 10px 40px;
+   height: 140px;
+   width: 120px;
+}
+
+.books{
+   padding-top: 10px;
+   display: flex;
+   flex-direction: column;
+   line-height:11px;
+   padding-top:25px;
+   margin-left: 15px;
+   font-family: 'Work Sans', sans-serif;
+   grid-area: book;
+}
+.Bookname-content-moreRead{
+   font-size: 15px;
+   display: flex;
+   align-items: center;
+}
+.authour-content{
+   font-size: 12px;
+}
 .pre-content{
     font-size: 13px;
     color:rgb(29, 29, 243)
 }
-.MoreRead{
-        margin-top: 5em; 
+.value-content{
+   font-size: 20px;
+   font-weight: bold
 }
+
+

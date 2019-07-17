@@ -5,6 +5,90 @@
     font-size: 13px;
     color: red
 }
-.button{
-    float:left
+
+.value-content{
+font-size: 20px;
+font-weight: bold
 }
+
+.Title-content{
+   margin: 50px 0px 0px 10px;
+   font-size: 25px;
+   font-family: 'Work Sans', sans-serif;
+}
+.Content-favorite{
+   margin: 10px 10px;
+  background: #ffffff;
+   display: grid;
+   grid-template-columns: 1fr 2fr;
+   grid-template-rows: 180px 100px;
+   grid-template-areas:
+   "image book"
+   "botao botao";
+   height:250px;
+   border-radius: 10px;
+   box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.2);
+}
+.Image{
+   grid-area: image
+}
+.foto{
+   margin: 20px 10px 10px 40px;
+   height: 140px;
+   width: 120px;
+}
+
+.books{
+   padding-top: 10px;
+   display: flex;
+   flex-direction: column;
+   line-height:11px;
+   padding-top:25px;
+   margin-left: 15px;
+   font-family: 'Work Sans', sans-serif;
+   grid-area: book;
+   
+}
+.Bookname-content-favorite{
+   font-size: 15px;
+   display: flex;
+   align-items: center;
+}
+.authour-content{
+   font-size: 12px;
+   
+}
+.novalue-content{
+   font-size:13px;
+   font-weight: bold;
+   text-decoration: line-through;
+}
+.value-content{
+   font-size: 20px;
+   font-weight: bold
+}
+
+.botao{
+   grid-area: botao;
+   padding: 10px;
+}
+.Car-icon{
+   margin-right: 10px;
+}
+.button-fav{
+   width: 100%;
+   height: 50px;
+   color: black !important;
+   border: 1px solid black !important;
+   font-weight: bold !important;
+}
+.button-fav:hover{
+   color: black !important;
+   border: 1px solid #ffbb33!important;
+   background: #ffbb33 !important
+}
+
+
+
+
+

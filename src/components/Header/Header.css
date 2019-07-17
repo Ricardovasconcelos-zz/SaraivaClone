@@ -9,12 +9,12 @@
 }
 
 .nav{
-    background: #97e2ff
+    background: #fd0
 }
 .nav-title{
     margin-top: 3px;
     padding-left: 20px;
-    font-family: Lato
+    font-family: Lato;
 }
 
 .header .container a{
