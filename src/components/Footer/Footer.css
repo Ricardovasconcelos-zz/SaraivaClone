@@ -1,0 +1,58 @@
+.Footer{
+    background: white
+}
+.CardContent{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+.CardItems{
+   width: 250px;
+   height: 150px;
+   text-align:center;
+   margin-right: 20px;
+   Background: #efefef;
+   border-radius: 10px;
+   margin-bottom: 10px;
+}
+.CardItems:hover{
+    Background: #d3d3d3;   
+    cursor: pointer;
+ }
+ .Card-icons{
+    margin-top: 25px;
+}
+.CardItems h4{
+   font-size: 14px;
+   font-weight: bold;
+   font-family: 'Work Sans', sans-serif;
+}
+.CardItems p{
+    font-size: 11px;
+    font-family: 'Work Sans', sans-serif;
+ }
+ .FooterName h4{
+     text-align: center;
+     font-size: 15px;
+     padding-bottom:20px;
+ }
+ .FooterName{
+    text-align: center;
+    font-size: 10px;
+}
+ @media screen and (max-width: 767px){
+    .CardContent{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding-top: 10em;
+    }
+    .CardItems{
+        width: 200px;
+        height: 150px;
+        margin-bottom: 10px;
+
+     }
+}

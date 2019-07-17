@@ -14,13 +14,14 @@ const Payment = () => (
                     <p className="text-modelPayment">Meios de pagamento</p>
                     <img src={PaymentModel} alt="payment" />
                 </div>
-                <div className="SecurityPayment">
-                    <p className="text-securityPayment">Site Seguro</p>
-                    <img src={SecurityPayment} alt="security" />
-                </div>
+               
                 <div className="SocialMedia">
                     <p className="text-socialMedia">Redes Sociais</p>
                     <img src={SocialMedia} alt="security" />
+                </div>
+                <div className="SecurityPayment">
+                    <p className="text-securityPayment">Site Seguro</p>
+                    <img src={SecurityPayment} alt="security" />
                 </div>
             </div>
         </Container>
