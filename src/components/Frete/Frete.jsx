@@ -13,7 +13,7 @@ const Frete = () => (
                     <FaTruck className="truck" size={30} />
                     <div className="contentFrente">
                         <h4>FRETE GRÁTIS EM TODO O SITE</h4>
-                        <p>Veja as condições para cada categoria.</p>
+                        <p className="text-frete">Veja as condições para cada categoria.</p>
                     </div>
                 </div>
 
@@ -21,7 +21,7 @@ const Frete = () => (
                     <FaHeart size={30} className="check" />
                     <div className="contentPremium">
                         <h4>2UBOOKS PREMIUM</h4>
-                        <p>A cada 500 reais em compras, metade do valor é convertido para doações</p>
+                        <p className="text-premium">A cada 500 reais em compras, metade do valor é convertido para doações</p>
                     </div>
 
                 </div>

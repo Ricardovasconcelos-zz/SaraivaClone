@@ -62,9 +62,13 @@
     font-style: normal;
     text-rendering: optimizeLegibility;
 }
-p{
+.text-frete{
     font-size: 13px;
-    text-shadow: 1px 1px 10px  rgb(145, 144, 144)
+    text-shadow: 1px 1px 10px  rgb(194, 194, 194)
+}
+.text-premium{
+    font-size: 13px;
+    text-shadow: 1px 1px 10px  rgb(194, 194, 194)
 }
 
 @media screen and (max-width: 767px){

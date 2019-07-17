@@ -8,7 +8,7 @@ import MoreRead from './components/MoreRead/MoreRead';
 import Favorite from './components/Favorite/Favorite'
 import ForYou from './components/ForYou/ForYou';
 import Frete from './components/Frete/Frete'
-
+import Payment from './components/Payment/Payment'
 import './App.css'
 
 
@@ -23,6 +23,7 @@ class App extends Component {
        <ForYou/>
         <MoreRead/>
         <Frete/>
+        <Payment/>
 
       </div>
     )
