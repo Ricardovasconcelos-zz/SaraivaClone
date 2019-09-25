@@ -5,7 +5,6 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding-top: 20px;
 }
 
 .CardItems{
@@ -44,10 +43,13 @@
 }
  @media screen and (max-width: 767px){
     .CardContent{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    padding-top: 10em;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+flex-wrap: wrap;
+padding-top: 10em;
+padding-left: 2em;
     }
     .CardItems{
         width: 200px;

@@ -50,8 +50,8 @@ margin-top: 3em;
  @media screen and (max-width: 767px){
     .ForYou{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr;
     grid-template-areas: 
     "news""lowprice"
     "love""invest";
