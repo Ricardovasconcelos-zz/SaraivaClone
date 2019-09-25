@@ -20,7 +20,7 @@ const Frete = () => (
                 <div className="Premium">
                     <FaHeart size={30} className="check" />
                     <div className="contentPremium">
-                        <h4>2UBOOKS PREMIUM</h4>
+                        <h4>SARAIVA PREMIUM</h4>
                         <p className="text-premium">A cada 500 reais em compras, metade do valor é convertido para doações</p>
                     </div>
 

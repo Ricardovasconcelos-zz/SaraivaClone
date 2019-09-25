@@ -96,7 +96,7 @@ import { Container, Button } from 'react-bootstrap'
                     <div className="Image">
                       <img
                         src={item.volumeInfo.imageLinks.smallThumbnail}
-                        className="foto"
+                        className="foto" alt=""
                       />
                     </div>
                     <div className="books">

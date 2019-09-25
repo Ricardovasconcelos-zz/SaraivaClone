@@ -7,7 +7,7 @@ import './MoreRead.css'
 import apiMoreRead from '../../services/apiMoreRead'
 
 
-import { Container, Button } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 
  class MoreRead extends Component {
   state = {
@@ -91,7 +91,7 @@ import { Container, Button } from 'react-bootstrap'
                     <div className="Image">
                       <img
                         src={item.volumeInfo.imageLinks.smallThumbnail}
-                        className="foto"
+                        className="foto" alt=""
                       />
                     </div>
                     <div className="books">

@@ -18,11 +18,11 @@ const Footer = () => (
                     <div className="CardItems">
                         <TiLocationOutline size={35} className="Card-icons" />
                         <h4>Nossas Lojas</h4>
-                        <p>Encontre uma loja 2UBooks mais perto de você.</p>
+                        <p>Encontre uma loja SARAIVA mais perto de você.</p>
                     </div>
                     <div className="CardItems">
                         <TiBusinessCard size={35} className="Card-icons" />
-                        <h4>Cartão 2UBooks</h4>
+                        <h4>Cartão SARAIVA</h4>
                         <p>Condições Especiais para suas compras em nossas lojas e site.</p>
                     </div>
                     <div className="CardItems">
@@ -33,8 +33,7 @@ const Footer = () => (
                 </div>
             </div>
             <div className="FooterName">
-                <p>As ofertas são válidas por tempo determinado e/ou enquanto durarem os estoques.
-               Nosso serviço de entregas não permite encomendas feitas com endereçamento de Caixa Postal.</p>
+                <p>Esse site não tem nenhum fim lucrativo, é apenas um clone da loja SARAIVA para aprimorar meu conhecimento nas tecnologias que foram utilizadas!</p>
                 <h4>Desenvolvido por RicardoVasconcelos</h4>
             </div>
         </Container>

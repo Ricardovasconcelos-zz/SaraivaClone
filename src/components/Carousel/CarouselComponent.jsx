@@ -18,13 +18,6 @@ const CarouselComponent = () => (
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="https://media.cora.de/revslider/hc_homepage_test/Amazon_KemmererBrigit_WorteDieLeuchtenWieSterne_1000x330px.jpg"
-                    alt="Third slide"
-                />
-            </Carousel.Item>
-            <Carousel.Item>
-                <img
-                    className="d-block w-100"
                     src="http://spiritualebook.com/images/banner.jpg"
                     alt="Third slide"
                 />

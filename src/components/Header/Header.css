@@ -14,7 +14,8 @@
 .nav-title{
     margin-top: 3px;
     padding-left: 20px;
-    font-family: Lato;
+    font-weight: bold;
+    color: black;
 }
 
 .header .container a{
