@@ -1,4 +1,23 @@
 # SARAIVACLONE
+![foto (1)](https://user-images.githubusercontent.com/26417291/70746759-36397a80-1d05-11ea-92f9-d8820ff517be.jpg)
+
+# About this Project
+This project is a simple Saraiva book store clone built with React and requesting the Google's Books Api 
+
+# Some Observations about this App
+This project is part of my personal portfolio, I'm trying improve my skills, so, I'll be happy if you could provide me any feedback about the project.
+
+You can report that could make me a better developer!
+
+Email-me: ricardovasconcelos.dev@gmail.com
+
+Connect with me at Linkedin.
+
+Also, you can use this Project as you wish!!
+
+It's free!
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
