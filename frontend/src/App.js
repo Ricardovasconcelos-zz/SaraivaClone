@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import Header from './components/Header/Header';
 import CarouselComponent from './components/Carousel/CarouselComponent'
@@ -12,8 +12,7 @@ import Footer from './components/Footer/Footer'
 import './App.css'
 
 
-class App extends Component {
-  render() {
+const App =  () => {  
     return(
       <div className="App">
         <Header/>
@@ -28,5 +27,5 @@ class App extends Component {
       </div>
     )
   }
-}
+
 export default App
