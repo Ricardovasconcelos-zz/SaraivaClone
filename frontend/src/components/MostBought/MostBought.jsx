@@ -3,33 +3,39 @@ import Slider from "react-slick";
 import { FiShoppingCart } from "react-icons/fi";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Order from "../Orders/Cart";
 import axios from "axios";
 import "./MostBought.css";
 
 import apiAllBooks from "../../services/apiAllBooks";
 import { Container, Button } from "react-bootstrap";
 
-const URL = "http://localhost:3030/Order";
+const URL = "http://localhost:3030/";
 
 class MostBought extends Component {
   state = {
     infoBooks: [],
-    BookId: ""
+    BookId: "",
+    AddCart: 0
   };
 
   componentDidMount() {
     this.loadBooks();
+    this.RemoveOrder();
   }
+
+  RemoveOrder = async () => {
+    await axios.delete(`${URL}Clean`);
+  };
 
   AddOrder = async id => {
     await this.setState({
       BookId: id
     });
 
-    const response = await axios.post(URL, {
+    await axios.post(`${URL}Order`, {
       bookId: this.state.BookId
     });
-    console.log(response);
   };
 
   notify = () => toast.success("Adicionado ao carrinho");

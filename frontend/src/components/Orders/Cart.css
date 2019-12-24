@@ -1,0 +1,31 @@
+.Order {
+  position: sticky;
+  margin-top: 10px;
+  top: 20px;
+  width: 90px;
+  height: 60px;
+  background-color: #fd0;
+  float: right;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.Icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 2px;
+}
+.Icons > p {
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 8px;
+}
+.linkStyle {
+  text-decoration: none;
+  color: rgb(92, 91, 91);
+}
+.linkStyle:hover {
+  color: black;
+}

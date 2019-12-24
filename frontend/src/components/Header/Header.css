@@ -1,49 +1,49 @@
-.header .container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.header .container .logo{
-    display: flex;
-    align-items: center
+.header .container .logo {
+  display: flex;
+  align-items: center;
 }
-
-.nav{
-    background: #fd0
+.nav {
+  background: #fd0;
+  width: 100%;
+  height: 9vh;
+  position: sticky;
 }
-.nav-title{
-    margin-top: 3px;
-    padding-left: 20px;
-    font-weight: bold;
-    color: black;
-}
-
-.header .container a{
-    text-decoration: none
-}
-.header .container a:link{
-    color: rgb(105, 104, 104)
-}
-.header .container a:visited{
-    color: rgb(105, 104, 104)
-}
-.header .container a:hover{
-    color: rgb(105, 104, 104)
-    
-}
-.header .container a:active{
-    color: rgb(105, 104, 104)
+.nav-title {
+  margin-top: 3px;
+  padding-left: 20px;
+  font-weight: bold;
+  color: black;
 }
 
-
-.gitName{
-    color: rgb(138, 144, 150);
-    font-weight: bold;
-    font-family: Montserrat, sans-serif
+.header .container a {
+  text-decoration: none;
+}
+.header .container a:link {
+  color: rgb(105, 104, 104);
+}
+.header .container a:visited {
+  color: rgb(105, 104, 104);
+}
+.header .container a:hover {
+  color: rgb(105, 104, 104);
+}
+.header .container a:active {
+  color: rgb(105, 104, 104);
 }
 
-@media (max-width: 700px){
-    .header .container{
-        flex-direction: column
-    }
+.gitName {
+  color: rgb(138, 144, 150);
+  font-weight: bold;
+  font-family: Montserrat, sans-serif;
+}
+
+@media (max-width: 700px) {
+  .header .container {
+    flex-direction: column;
+  }
 }
