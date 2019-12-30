@@ -1,33 +1,27 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 
+import "./MoreRead.css";
 
-import './MoreRead.css'
+import apiMoreRead from "../../services/apiMoreRead";
 
-import apiMoreRead from '../../services/apiMoreRead'
+import { Container } from "react-bootstrap";
 
-
-import { Container } from 'react-bootstrap'
-
- class MoreRead extends Component {
+class MoreRead extends Component {
   state = {
-    infoBooks: [],
-  }
+    infoBooks: []
+  };
 
   componentDidMount() {
     this.loadBooks();
   }
 
   loadBooks = async () => {
-
-    const response = await apiMoreRead.get('')
-    console.log(response.data)
-
+    const response = await apiMoreRead.get("");
     this.setState({
       infoBooks: response.data.items
-    })
-
-  }
+    });
+  };
   render() {
     const { infoBooks } = this.state;
 
@@ -47,14 +41,16 @@ import { Container } from 'react-bootstrap'
             infinite: true,
             dots: true
           }
-        }, {
+        },
+        {
           breakpoint: 768,
           settings: {
             slidesToShow: 2,
             slidesToScroll: 2,
             initialSlide: 2
           }
-        }, {
+        },
+        {
           breakpoint: 765,
           settings: {
             slidesToShow: 1,
@@ -86,30 +82,34 @@ import { Container } from 'react-bootstrap'
           <h2 className="Title-content"> Os mais visto da semana </h2>
           <Slider {...settings}>
             {infoBooks.map(item => (
-              <div>
-                  <div className="Content-moreRead">
-                    <div className="Image">
-                      <img
-                        src={item.volumeInfo.imageLinks.smallThumbnail}
-                        className="foto" alt=""
-                      />
-                    </div>
-                    <div className="books">
-                      <h4 className="Bookname-content-moreRead"><strong>{item.volumeInfo.title}</strong></h4>
-                      <h4 className="authour-content">{item.volumeInfo.authors} </h4>
-                      <h4 className="pre-content">Pré-venda</h4>
-                      <h4 className="value-content">R$ {item.saleInfo.retailPrice.amount}</h4>
-                    </div>
+              <div key={item.id}>
+                <div className="Content-moreRead">
+                  <div className="Image">
+                    <img
+                      src={item.volumeInfo.imageLinks.smallThumbnail}
+                      className="foto"
+                      alt=""
+                    />
                   </div>
-                  
+                  <div className="books">
+                    <h4 className="Bookname-content-moreRead">
+                      <strong>{item.volumeInfo.title}</strong>
+                    </h4>
+                    <h4 className="authour-content">
+                      {item.volumeInfo.authors}{" "}
+                    </h4>
+                    <h4 className="pre-content">Pré-venda</h4>
+                    <h4 className="value-content">
+                      R$ {item.saleInfo.retailPrice.amount}
+                    </h4>
+                  </div>
+                </div>
               </div>
-            ))
-            }
-
+            ))}
           </Slider>
         </div>
       </Container>
     );
   }
 }
-export default MoreRead
+export default MoreRead;

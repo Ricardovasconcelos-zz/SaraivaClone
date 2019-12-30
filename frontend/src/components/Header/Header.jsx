@@ -1,7 +1,6 @@
 import React from "react";
 
 import "./Header.css";
-import { Navbar } from "react-bootstrap";
 import { FiBookOpen } from "react-icons/fi";
 const Header = () => (
   <div className="header">

@@ -3,7 +3,6 @@ import Slider from "react-slick";
 import { FiShoppingCart } from "react-icons/fi";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Order from "../Orders/Cart";
 import axios from "axios";
 import "./MostBought.css";
 
@@ -42,7 +41,6 @@ class MostBought extends Component {
 
   loadBooks = async () => {
     const response = await apiAllBooks.get("");
-    console.log(response.data);
 
     this.setState({
       infoBooks: response.data.items
@@ -107,12 +105,10 @@ class MostBought extends Component {
         <ToastContainer
           position="top-right"
           autoClose={5000}
-          hideProgressBar={false}
+          hideProgressBar={true}
           newestOnTop={false}
-          closeOnClick
           rtl={false}
           draggable
-          pauseOnHover
         />
         <ToastContainer />
 
@@ -121,7 +117,7 @@ class MostBought extends Component {
             <h2 className="Title-content"> Mais Vendidos </h2>
             <Slider {...settings}>
               {infoBooks.map(item => (
-                <div>
+                <div key={item.id}>
                   <div className="Content">
                     <div className="Image">
                       <img

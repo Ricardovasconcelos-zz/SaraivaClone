@@ -22,7 +22,6 @@ class Favorite extends Component {
 
   loadBooks = async () => {
     const response = await apiFavoriteBooks.get("");
-    console.log(response.data);
 
     this.setState({
       infoBooks: response.data.items
@@ -103,7 +102,7 @@ class Favorite extends Component {
             <h2 className="Title-content">Os queridinhos da galera </h2>
             <Slider {...settings}>
               {infoBooks.map(item => (
-                <div>
+                <div key={item.id}>
                   <div className="Content-favorite">
                     <div className="Image">
                       <img

@@ -2,20 +2,34 @@ import React, { useEffect, useState } from "react";
 import Header from "../Header/Header";
 import "./Order.css";
 import axios from "axios";
-import { FaPlusCircle, FaMinusCircle } from "react-icons/fa";
+import { FaRegTrashAlt } from "react-icons/fa";
 
 const URL = "http://localhost:3030/order";
 
 const Orders = () => {
   const [Books, setBooks] = useState([]);
-
-  const [moreBook, setmoreBook] = useState(1);
+  const [AllPrice, setAllPrice] = useState("0,00");
 
   const ShowOrders = async () => {
     const res = await axios.get(URL);
-    console.log(res.data);
     setBooks(res.data);
-    console.log("valor do books", Books);
+    getAllPrice();
+  };
+
+  const getAllPrice = async () => {
+    const response = await axios.get(`${URL}/allprice`);
+    if (response.data.length !== 0) {
+      setAllPrice(response.data[0].sum.toFixed(2));
+    } else {
+      setAllPrice("0,00");
+    }
+  };
+
+  const deleteBook = async id => {
+    await axios.delete(`${URL}/delete`, {
+      headers: { id }
+    });
+    ShowOrders();
   };
 
   useEffect(() => {
@@ -31,7 +45,7 @@ const Orders = () => {
             <div className="price">
               <h1>TUDO</h1>
               <div className="value">
-                <h3>R$ 300,00</h3>
+                <h3>R$ {AllPrice}</h3>
                 <p>em até 10x sem júros</p>
                 <button className="buttonBuy" onClick={ShowOrders}>
                   COMPRAR
@@ -45,9 +59,7 @@ const Orders = () => {
                   <h3>R$ {item.price}</h3>
                   <h6>{item.title}</h6>
                   <div className="optionsIcons">
-                    <FaMinusCircle />
-                    <h6>{moreBook}</h6>
-                    <FaPlusCircle />
+                    <FaRegTrashAlt onClick={() => deleteBook(item._id)} />
                   </div>
                 </div>
               </div>
