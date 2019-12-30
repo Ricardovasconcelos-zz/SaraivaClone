@@ -4,7 +4,7 @@ import "./Order.css";
 import axios from "axios";
 
 import { Modal, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+
 import Lottie from "../Animation/Animation";
 import { MdClose } from "react-icons/md";
 
@@ -55,14 +55,14 @@ const Orders = ({ history }) => {
 
   useEffect(() => {
     ShowOrders();
-  }, []);
+  });
 
   return (
     <>
       <Header />
       <Modal show={Alert}>
         <Modal.Dialog>
-          <Modal.Header closeButton>
+          <Modal.Header>
             <Modal.Title>Não há nenhum item em seu carrinho</Modal.Title>
           </Modal.Header>
 
@@ -96,7 +96,7 @@ const Orders = ({ history }) => {
                 <tr key={item._id}>
                   <td>
                     <div className="ItemStyle">
-                      <img src={item.thumbnail} className="ImgBook" />
+                      <img alt="" src={item.thumbnail} className="ImgBook" />
                       <p>{item.title}</p>
                     </div>
                   </td>
@@ -121,7 +121,7 @@ const Orders = ({ history }) => {
                 Veja as opções de entrega para seus itens, com todos os prazos e
                 valores.
               </p>
-              <a href="">Calcular</a>
+              <a href="/">Calcular</a>
             </div>
             <div className="Cupom">
               <h4>Cupom</h4>
