@@ -3,7 +3,7 @@ import Header from "../Header/Header";
 import "./Order.css";
 import axios from "axios";
 
-import { Modal, Button } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
 
 import Lottie from "../Animation/Animation";
 import { MdClose } from "react-icons/md";
@@ -14,7 +14,6 @@ const Orders = ({ history }) => {
   const [Books, setBooks] = useState([]);
   const [AllPrice, setAllPrice] = useState("0,00");
   const [show, setShow] = useState(false);
-  const [Alert, setAlert] = useState(false);
 
   const ShowOrders = async () => {
     const res = await axios.get(URL);
@@ -24,11 +23,11 @@ const Orders = ({ history }) => {
 
   const getAllPrice = async () => {
     const response = await axios.get(`${URL}/allprice`);
+
     if (response.data.length !== 0) {
       setAllPrice(response.data[0].sum.toFixed(2));
     } else {
       setAllPrice("0,00");
-      setAlert(true);
     }
   };
 
@@ -40,15 +39,15 @@ const Orders = ({ history }) => {
   };
 
   const handleShow = () => {
-    setShow(true);
-    setTimeout(() => {
-      setShow(false);
-      initialPage();
-    }, 2000);
+    if (AllPrice !== "0,00") {
+      setShow(true);
+      setTimeout(() => {
+        setShow(false);
+        initialPage();
+      }, 2000);
+    }
   };
-  const toFalse = () => {
-    setAlert(false);
-  };
+
   const initialPage = () => {
     return history.push("/");
   };
@@ -60,26 +59,6 @@ const Orders = ({ history }) => {
   return (
     <>
       <Header />
-      <Modal show={Alert}>
-        <Modal.Dialog>
-          <Modal.Header>
-            <Modal.Title>Não há nenhum item em seu carrinho</Modal.Title>
-          </Modal.Header>
-
-          <Modal.Body>
-            <p>Deseja retornar para loja?</p>
-          </Modal.Body>
-
-          <Modal.Footer>
-            <Button variant="warning" onClick={initialPage}>
-              Ir para loja
-            </Button>
-            <Button variant="success" onClick={toFalse}>
-              Permanecer no carrinho
-            </Button>
-          </Modal.Footer>
-        </Modal.Dialog>
-      </Modal>
       <div className="Ground">
         <div className="Orders">
           <table>
@@ -125,8 +104,10 @@ const Orders = ({ history }) => {
             </div>
             <div className="Cupom">
               <h4>Cupom</h4>
-              <input placeholder="Código"></input>
-              <button>Aplicar</button>
+              <div className="CupomStyle">
+                <input placeholder="Código"></input>
+                <button>Aplicar</button>
+              </div>
             </div>
             <div className="Total">
               <div className="TotalDetail">
