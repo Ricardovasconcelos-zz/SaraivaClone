@@ -3,7 +3,7 @@
 ![saraiva](https://user-images.githubusercontent.com/26417291/71605740-13eb8d80-2b4a-11ea-8576-bc225294bdf3.gif)
 
 # About this Project
-A simple Saraiva book store clone built with React and requesting the Google's Books Api 
+A simple Saraiva book store clone built with React, Node and Mongodb also requesting the Google's Books Api 
 
 # Some Observations about this project
 This project is part of my personal portfolio, I'm trying improve my skills, so, I'll be happy if you could provide me any feedback about the project.
@@ -18,9 +18,8 @@ Also, you can use this Project as you wish!!
 
 It's free!
 
-This project was bootstrapped with Create React App.
 ## Available Scripts
-
+This project was bootstrapped with Create React App.
 In the project directory, you can run:
 
 ### `npm start`
